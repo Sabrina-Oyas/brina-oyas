@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::table('products', function (Blueprint $table) {
             // On ajoute les colonnes nécessaires pour le Dashboard et la gestion
             $table->decimal('price', 10, 2)->default(0)->after('description');
-            $table->integer('stock_quantity')->default(0)->after('stock');
             $table->integer('stock_min')->default(5)->after('stock_quantity');
         });
     }
